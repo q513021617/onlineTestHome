@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://www.17sucai.com/preview/1528155/2019-03-06/aliyun/index.html -->
+<html>
+
+{% include 'head.html' ignore missing %}
+
+<body style="background: #1b2226">
+
+
+
+<div class="top" >
+{% include 'nav.html' ignore missing %}
+    <div class="banner">
+    <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+
+
+       <div class="swiper-slide blue-slide swiper-slide-duplicate" style="background: rgb(36, 40, 44); width: 1349px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;" data-swiper-slide-index="4">
+
+{#					<img src="http://puldt3hoz.bkt.clouddn.com/banner4_bg.png" swiper-animate-effect="fadeInUp" class="ani" />#}
+				</div>
+
+
+        <img src="http://puldt3hoz.bkt.clouddn.com/banner4_bg.png" swiper-animate-effect="fadeInUp" class="ani"/>
+    </div>
+    </div>
+
+
+<div class="section section-news" id="section-news">
+	<div class="section-title" style="padding-top: 100px">
+		<h1 style="color: #eff3f5">新闻动态</h1>
+		<h2 style="color: #eff3f5">教学前沿、政策方针，24小时更新不停</h2>
+	</div>
+
+
+</div>
+
+
+<div class="section-wrapper" style="padding-left: 300px;padding-top: 100px;">
+		<div class="news-body">
+
+			<div class="news-sub">
+				<!-- 遍历新闻列表 -->
+				<ul class="news-list-v show">
+                   {% for new in headsnews %}
+
+					<li>
+						<a href="/news/{{ new.id }}" class="news-list-card">
+							<h3 class="h3">{{ new.title }}</h3>
+							<p class="p">{{ new.context }}</p>
+							<span class="more">查看详情<i class="cui-icon cui-icon-more"></i></span>
+						</a>
+					</li>
+
+                    {% endfor %}
+				</ul>
+
+				<ul class="news-list-v">
+                {%for new in news %}
+					<li>
+						<a href="/news/{{ new.id }}" class="news-list-card">
+								<h3 class="h3">{{ new.title }}</h3>
+							<p class="p">{{ new.context }}</p>
+							<span class="more">查看详情<i class="cui-icon cui-icon-more"></i></span>
+						</a>
+					</li>
+                {% endfor %}
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="section-bottom">
+		<div class="section-more-wrap">
+			<a class="news-more" href="#">
+				<span>更多新鲜动态</span><i class="cui-icon cui-icon-more"></i>
+			</a>
+			<a class="news-change">
+				<span>换一换</span>
+			</a>
+		</div>
+	</div>
+
+
+
+
+</div>
+
+
+
+{% include 'footer.html' ignore missing %}
+</body>
+</html>

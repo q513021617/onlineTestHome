@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*
+ 
+ * 17素材vip建站专区模块代码
+ * 详尽信息请看官网：http://www.17sucai.com/pins/vip
+ *
+ * Copyright , 温州易站网络科技有限公司版权所有
+ *
+ * 请尊重原创，未经允许请勿转载。
+ * 在保留版权的前提下可应用于个人或商业用途
+ 
+*/
+
+*{margin:0;padding:0;box-sizing:content-box;font-family:"微软雅黑"}
+a{text-decoration:none;color:inherit}
+img{border:none;max-width:100%}
+ul{list-style:none}
+input::-webkit-input-placeholder{color:#ccc}
+input:-ms-input-placeholder{color:#ccc}
+input::-moz-placeholder{color:#ccc}
+.top{width:100%;height:640px;position:relative}
+.bar{width:100%;height:50px;border-bottom:1px solid hsla(0,0%,100%,.15);position:absolute;top:0;z-index:6}
+.bar .logo{margin-left:20px;display:block;float:left;width:80px;margin-top:16px;position:relative}
+.bar .search{float:right;width:200px;height:50px;background:hsla(0,0%,100%,.12);position:relative;transition:all .3s linear}
+.bar .search:hover{margin-top:1px;height:49px;width:300px;background:#262c30;outline:1px solid #00C1DE}
+.bar .search input{position:relative;font-size:14px;box-sizing:border-box;padding-left:16px;padding-right:22px;width:100%;height:100%;outline:0;background:0 0;border:none;color:#fff;line-height:50px}
+.bar .search .search_icon{display:block;position:absolute;z-index:3;right:0;top:0;bottom:0;width:16px;height:16px;margin:17px;cursor:pointer;background-image:url(../images/search_icon.png);background-size:cover;background-repeat:no-repeat;background-position:50%;opacity:.8}
+.bar .area{float:right;color:#fff;height:50px;line-height:50px;font-size:14px;position:relative;padding:0 12px;cursor:pointer}
+.bar .area i{width:14px;height:14px;display:inline-block;background:url(../images/arrow_down.png) no-repeat top 2px center;background-size:cover;padding-left:5px}
+.bar .area ul{position:absolute;left:0;top:50px;background-color:#272b2f;width:198px;padding:8px 0;cursor:default;display:none}
+.bar .area:hover ul{display:block;z-index:3}
+.bar .area:hover i{width:14px;height:14px;display:inline-block;background:url(../images/arrow_up.png) no-repeat top 2px center;background-size:cover;padding-left:5px}
+.bar .area ul li{padding:3px 20px;height:30px;line-height:30px;cursor:pointer}
+.bar .area ul li.line{height:1px;margin:11px 0;padding:0;background-color:#373d41;margin-top:8px;margin-bottom:8px}
+.bar .area ul li a{display:block;height:100%;white-space:nowrap;color:#fff}
+.bar .area ul li a:hover{color:#00c1de}
+.bar .area ul li a span{display:inline-block;width:102px}
+.bar .bar_menu{float:right;font-size:14px}
+.bar .bar_menu ul li{float:left;height:50px;line-height:50px;padding:0 12px}
+.bar .bar_menu ul li a{color:#fff}
+.bar .bar_menu ul li a:hover{color:#00c1de}
+.bar .bar_menu ul li a i{vertical-align:middle;margin-top:-3px;display:inline-block;width:20px;height:18px;margin-right:4px;background-size:cover;background-repeat:no-repeat;background-image:url(../images/shop_icon.png)}
+.nav{height:50px;font-size:14px;line-height:50px;width:100%;position:absolute;top:50px;left:0;z-index:5;border-bottom:1px solid hsla(0,0%,100%,.15)}
+.nav ul li{float:left;height:50px;line-height:50px;position:relative}
+.nav ul li a{color:#fff;padding:0 16px;display:block}
+.nav ul li a:hover{color:#00c1de}
+.nav .register{float:right;height:50px;line-height:50px;background:#00c1de;padding:0 32px;color:#fff}
+.nav .register:hover{background-color:#28d0e9}
+.nav .son{color:#1b2226;background:#fff;position:absolute;left:-130px;top:50px;padding:16px 10px 150px 10px;height:auto;width:1100px;box-sizing:border-box;opacity:0;visibility:hidden;z-index:-1;transition:opacity .13s ease-in-out,width .13s ease-in-out}
+.nav ul li:hover .son{opacity:1;z-index:5;visibility:visible}
+.nav .son:after{content:"";width:0;height:0;border:8px solid transparent;border-bottom-color:#fff;position:absolute;z-index:1000;top:-16px;left:165px}
+.nav .son .list{width:20%;float:left}
+.nav .son .list .title{margin:0 0 6.9px 8px;width:180px;height:40px;line-height:30px;border-bottom:1px solid #eff3f5;font-size:14px;font-weight:700;color:#000}
+.nav .son .list p{padding:0 0 0 8px;line-height:24px;font-size:12px;color:#000;text-align:left}
+.nav .son .list p:hover{background-color:#f2f4f5}
+.nav .son .list p a{color:#000}
+.nav .son .list p a i{font-style:normal;padding-left:5px;color:#F45428;font-size:12px;font-weight:700}
+.banner{width:100%;height:100%;position:absolute;top:0;left:0;z-index:0}
+.swiper-container{width:100%;height:100%}
+.swiper-slide img{width:100%;height:640px}
+.swiper-slide .info{width:1200px;left:50%;margin-left:-600px;position:absolute;height:100%;z-index:2}
+.swiper-slide .info h1{color:#fff;text-align:left;font-size:40px;font-weight:400;margin-bottom:12px;position:absolute;top:180px;left:0;z-index:2}
+.swiper-slide .info p{color:#fff;text-align:left;font-size:20px;max-width:700px;line-height:36px;position:absolute;top:245px;left:0;z-index:2}
+.swiper-slide .info a{line-height:20px;width:auto;font-size:20px!important;color:#fff;border:none;border-bottom:3px solid #00c1de;background:0 0;position:absolute;top:325px;left:0;z-index:2;display:block;padding-bottom:10px}
+.swiper-container-horizontal>.swiper-pagination-bullets{bottom:145px}
+.swiper-slide .info a:hover{color:#00c1de}
+.swiper-pagination-bullet{width:40px;height:5px;border-radius:0}
+.swiper-pagination-bullet-active{width:40px;background:#fff}
+.recommend{position:absolute;z-index:2;bottom:0;left:0;height:136px;overflow:hidden;width:100%;background:#2d3035;background-color:hsla(0,0%,100%,.1)}
+.recommend ul{margin:0 auto;max-width:1200px;transition:opacity .3s linear}
+.recommend ul li{width:20%;float:left}
+.recommend ul li a{box-sizing:border-box;height:136px;position:relative;display:block;padding:30px 26px 24px;border-left:1px solid #727577;border-color:hsla(0,0%,100%,.06)}
+.recommend ul li a:hover{background-color:hsla(0,0%,100%,.06);text-decoration:none;border-color:transparent!important}
+.recommend ul li:last-child a{border-right:1px solid #727577;border-color:hsla(0,0%,100%,.06)}
+.recommend ul li a h2{color:#fff;font-weight:bolder;height:18px;font-size:16px;margin-bottom:8px}
+.recommend ul li a p{color:#fff;font-size:14px;line-height:24px;height:24px;opacity:.6}
